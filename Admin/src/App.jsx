@@ -10,7 +10,7 @@ import List from "./Components/page/list/List";
 import Order from "./Components/page/order/Order";
 
 const App = () => {
-  const url = import.meta.env.ADMIN_URL_BACKEND;
+  const url = import.meta.env.VITE_API_URL || "http://localhost:5500";
   return (
     <div>
       <ToastContainer />

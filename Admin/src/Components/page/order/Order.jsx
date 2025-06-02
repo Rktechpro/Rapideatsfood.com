@@ -19,7 +19,7 @@ const Order = ({ url }) => {
   };
   const HandleStaus = async (e, orderId) => {
     try {
-      const response = await axios.post(url + "/api/order/Status", {
+      const response = await axios.post(`${url}/api/order/Status`, {
         orderId,
         status: e.target.value,
       });
@@ -67,7 +67,7 @@ const Order = ({ url }) => {
             </div>
             <p>Item:{Order.items.length}</p>
             <p>Method:{Order.paymentMethod}</p>
-            <p>Payment:{Order.payment ? 'Done':'Pending'}</p>
+            <p>Payment:{Order.payment ? "Done" : "Pending"}</p>
             <p>₹{Order.amount}</p>
             <select
               onChange={(e) => HandleStaus(e, Order._id)}
