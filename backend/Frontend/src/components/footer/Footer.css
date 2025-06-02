@@ -1,0 +1,122 @@
+.footer {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 8vw;
+  padding-top: 80px;
+  color: white;
+  /* background: rgb(0, 0, 0, 0.8) url(../../assets/img/banner.jpg) no-repeat; */
+  background-color: #7f3a0f;
+  background-size: cover;
+  border-radius: inherit;
+  filter: unset;
+  transition: opacity 0.25s ease 0s, transform 0.25s ease 0s;
+  background-blend-mode: darken;
+  margin-top: 100px !important;
+}
+.footer-content {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 80px;
+}
+.footer-content-left,
+.footer-content-right,
+.footer-content-center {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 20px;
+}
+.footer-content-left li,
+.footer-content-right li,
+.footer-content-center li {
+  list-style: none;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+.footer-content-right h1,
+.footer-content-center h1 {
+  font-size: 20px;
+  font-weight: bold;
+  color: rgb(253, 247, 246);
+}
+
+.fa {
+  padding: 10px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 15px 10px;
+  border-radius: 50%;
+  height: 50px;
+}
+.fa:hover {
+  opacity: 0.7;
+}
+
+.fa-facebook {
+  font-size: 40px;
+  background: #3b5998;
+  color: white;
+}
+.fa-instagram {
+  font-size: 40px;
+
+  color: #f73d7e;
+  border-radius: 100%;
+}
+.fa-twitter {
+  font-size: 40px;
+  border-radius: 100%;
+  background: #5e88e3;
+  color: white;
+}
+.footer hr {
+  width: 100%;
+  height: 2px;
+  margin: 20px 0px;
+}
+.logo-footer {
+  color: gray;
+  font-size: 30px;
+  font-weight: bold;
+  font-family: fantasy;
+}
+.logo-s-footer {
+  color: #4f1902;
+  font-family: fantasy;
+}
+.Home-co {
+  font-size: 32px;
+  color: rgb(244, 238, 238);
+}
+.About-co {
+  font-size: 32px;
+}
+.Delivery-co {
+  font-size: 32px;
+}
+.Privacy-co {
+  font-size: 32px;
+}
+.name-co {
+  margin-left: 5px;
+}
+.email-co,
+.phone-co {
+  font-size: 32px;
+}
+
+@media screen and (max-width: 768px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .footer {
+    width: 100vw;
+  }
+}

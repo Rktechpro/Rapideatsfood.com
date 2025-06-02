@@ -1,0 +1,25 @@
+.about-container {
+  max-width: 800px;
+  margin: 10%;
+  padding: auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.about-container h1,
+.about-container h2 {
+  color: #6e5a5a;
+}
+
+.about-container p {
+  color: #999595;
+  line-height: 1.6;
+}
+
+.about-container ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+.image-about img {
+  width: 100vw;
+}

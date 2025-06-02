@@ -1,0 +1,50 @@
+.MyOrders {
+  margin: 35px 12px;
+  width: 97%;
+}
+
+.container-order {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 30px;
+}
+.OrderValue {
+  display: grid;
+  grid-template-columns: 0.5fr 2fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  align-items: center;
+  gap: 20px;
+  font-size: 15px;
+  padding: 10px 20px;
+  border: 1px solid #f29648;
+}
+.OrderValue img {
+  width: 40px;
+}
+.MyOrders p span {
+  color: #f29648;
+}
+.MyOrders p b {
+  font-weight: 600;
+}
+.OrderValue button {
+  padding: 10px 5px;
+  background-color: #f29648;
+  outline: none;
+  border-radius: 5px;
+  border: none;
+  color: rgb(121, 116, 116);
+  font-weight: bold;
+}
+
+@media Screen and (max-width: 900px) {
+  .OrderValue {
+    grid-template-columns: 2fr 2fr 1fr;
+    row-gap: 5px;
+    font-size: 11px;
+    margin-right: 4px;
+  }
+  .OrderValue button {
+    font-size: 10px;
+  }
+}

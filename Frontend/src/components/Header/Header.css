@@ -1,0 +1,137 @@
+.header {
+  height: 43vw;
+  width: 100vw;
+  background: rgba(0, 0, 0, 0.5) url(/src/assets/img/header.png) no-repeat;
+  background-size: cover;
+  transform: none;
+  border-radius: inherit;
+  filter: unset;
+  transition: opacity 0.25s ease 0s, transform 0.25s ease 0s;
+  background-blend-mode: darken;
+}
+.header_content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5vw;
+  max-width: 50%;
+  padding-top: 10%;
+  margin-left: 44px;
+}
+
+.head_p {
+  color: white;
+  font-size: 1vw;
+}
+.order_btn {
+  background-color: tomato;
+  font-size: 16px;
+  border: none;
+  padding: 10px 30px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: bold;
+}
+.order_btn:hover {
+  transition: 0.4s;
+  background-color: gold;
+}
+.hero-container {
+  text-align: left;
+  padding: 10px;
+}
+.title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  font-family: fantasy;
+}
+.high-l {
+  color: #908f8f;
+  background-color: #f1dfc2;
+  padding: 5px;
+}
+.high-ls {
+  color: rgb(234, 172, 161);
+}
+
+.subtitle {
+  font-size: 2.3rem;
+  font-weight: bold;
+
+  color: #d6d0d0;
+}
+
+.animated-text {
+  font-size: 1.75rem;
+  border-left: 4px solid white;
+  color: white;
+  padding-left: 8px;
+
+  font-weight: 600;
+}
+
+/* Responsive Design */
+@media (max-width:1180px) {
+  .header{
+    height: auto;
+    padding: 30px;
+    margin-top: 40px;
+  }
+  
+}
+@media (max-width: 768px) {
+  .header {
+    height: auto;
+    padding: 30px;
+    margin-top: 40px;
+    justify-content: center;
+    text-align: center;
+    background-image:none ;
+    background-color: #953A01;
+  }
+  .header_content {
+    max-width: 90%;
+    padding-top: 5%;
+    margin-left: 0;
+    align-items: center;
+  }
+  .head_p {
+     font-size: 10px;
+     font-family: sans-serif;
+  }
+  .button-container {
+    flex-direction: column;
+  }
+  .order_btn {
+    padding: 10px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .subtitle {
+    font-size: 1.2rem;
+  }
+
+  .animated-text {
+    font-size: 1rem;
+  }
+
+  .head_p {
+    font-size: 10px;
+    font-family: sans-serif;
+  }
+
+  .button-container {
+    flex-direction: column;
+  }
+
+  .order_btn {
+     padding: 10px 30px;
+    
+  }
+}
