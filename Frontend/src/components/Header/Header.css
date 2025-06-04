@@ -82,12 +82,13 @@
 @media (max-width: 768px) {
   .header {
     height: auto;
-    padding: 30px;
+    padding: 50px;
     margin-top: 40px;
     justify-content: center;
     text-align: center;
     background-image: none;
     background-color: #953a01;
+    display: none;
   }
   .header_content {
     max-width: 90%;
