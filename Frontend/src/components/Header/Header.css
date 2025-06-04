@@ -1,4 +1,4 @@
-/* .header {
+.header {
   height: 43vw;
   width: 100vw;
   background: rgba(0, 0, 0, 0.5) url(/src/assets/img/header.png) no-repeat;
@@ -69,15 +69,16 @@
   padding-left: 8px;
 
   font-weight: 600;
-} */
+}
 
-/* 
-@media (max-width: 1180px) {
-  .header {
+/* Responsive Design */
+@media (max-width:1180px) {
+  .header{
     height: auto;
     padding: 30px;
     margin-top: 40px;
   }
+  
 }
 @media (max-width: 768px) {
   .header {
@@ -86,9 +87,8 @@
     margin-top: 40px;
     justify-content: center;
     text-align: center;
-    background-image: none;
-    background-color: #953a01;
-    width: 100vw;
+    background-image:none ;
+    background-color: #953A01;
   }
   .header_content {
     max-width: 90%;
@@ -97,8 +97,8 @@
     align-items: center;
   }
   .head_p {
-    font-size: 10px;
-    font-family: sans-serif;
+     font-size: 10px;
+     font-family: sans-serif;
   }
   .button-container {
     flex-direction: column;
@@ -131,78 +131,7 @@
   }
 
   .order_btn {
-    padding: 10px 30px;
+     padding: 10px 30px;
+    
   }
-} */
-.header {
-  background: url("../../assets/img/food.png") no-repeat center center/cover;
-  color: white;
-  padding: 4rem 2rem;
-  text-align: center;
-}
-
-.header_content {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.hero-container {
-  margin-bottom: 2rem;
-  margin-top: 1rem;
-}
-
-.title {
-  font-size: clamp(2rem, 5vw, 4rem);
-  font-weight: bold;
-  display: flex;
-  justify-content: center;
-  gap: 0.5rem;
-}
-
-.high-l {
-  color: #ff5722;
-}
-
-.high-ls {
-  color: #ffc107;
-}
-
-.subtitle {
-  font-size: clamp(1rem, 3vw, 2rem);
-  margin: 1rem 0;
-}
-
-.animated-text {
-  font-size: clamp(1rem, 2.5vw, 1.5rem);
-  font-weight: 500;
-  margin-bottom: 1.5rem;
-}
-
-.head_p {
-  max-width: 700px;
-  margin: 0 auto 2rem;
-  font-size: clamp(0.9rem, 2.5vw, 1.2rem);
-  line-height: 1.6;
-}
-
-.flex {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
-}
-
-.order_btn {
-  padding: 0.8rem 2rem;
-  background-color: #ff5722;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.order_btn:hover {
-  background-color: #e64a19;
 }

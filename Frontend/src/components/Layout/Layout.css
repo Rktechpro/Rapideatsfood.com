@@ -2,7 +2,7 @@
 .menu-web {
   position: fixed;
   top: 0;
-  width: 100%;
+  width: 100vw;
   background-color: #181c20;
   z-index: 1000;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;

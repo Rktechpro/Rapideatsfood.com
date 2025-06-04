@@ -1,9 +1,16 @@
 import React from "react";
 import "./Header.css";
 import { ReactTyped } from "react-typed";
-import { Link } from "react-router-dom";
-
+import { useNavigate } from "react-router-dom";
 const Header = () => {
+  const navgateOrder = useNavigate();
+  const contactNavigate = useNavigate();
+  const orders = () => {
+    navgateOrder("/meorders");
+  };
+  const contact = () => {
+    contactNavigate("/contact");
+  };
   return (
     <div className="header">
       <div className="header_content">
@@ -34,10 +41,13 @@ const Header = () => {
           easy and enjoyable for everyone. Savor the flavor!
         </p>
         <div className="flex ">
-          <Link to="/meorders" className="link">
-          <button className="order_btn">Order</button>
-          </Link>
-          <button className="order_btn mx-3 ">Contact Me</button>
+          <button onClick={orders} className="order_btn">
+            Order
+          </button>
+
+          <button onClick={contact} className="order_btn mx-3 ">
+            Contact
+          </button>
         </div>
       </div>
     </div>
