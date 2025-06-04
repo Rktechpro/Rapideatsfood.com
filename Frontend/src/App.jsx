@@ -22,8 +22,8 @@ const App = () => {
     <>
       <ToastContainer />
       {showloginpage ? <Loginpage setLoginpage={setLoginpage} /> : <></>}
+      <Layout setLoginpage={setLoginpage} />
       <div className="app">
-        <Layout setLoginpage={setLoginpage} />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/About" element={<About />} />
