@@ -3,10 +3,9 @@ import "./Placeorder.css";
 import { context_store } from "../../context/ContextStore";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-
+import rezorpay from "../../assets/img/Razorpay.png";
 
 const Placeorder = () => {
-
   const navgateOrder = useNavigate();
   const [method, setMethod] = useState("COD");
   const {
@@ -236,7 +235,7 @@ const Placeorder = () => {
                     method === "razorpay" ? "bg-green-500" : ""
                   }`}
                 ></p>
-                <img src="./public/Razorpay.png" alt="" className=" w-24" />
+                <img src={rezorpay} alt="" className=" w-24" />
               </div>
               <div
                 onClick={() => setMethod("COD")}

@@ -8,7 +8,7 @@ const Food_disp = ({ category }) => {
   return (
     <div className="food_disp" id="food_disp">
       <h1 className="mx-10">The Top Dishes near you</h1>
-      <div className="container food_disp_list">
+      <div className=" food_disp_list">
         {food_lists.map((item, index) => {
           if (category == "All" || category === item.category) {
             return (
