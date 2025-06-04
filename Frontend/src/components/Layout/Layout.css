@@ -204,6 +204,7 @@
     border: none;
     cursor: pointer;
     display: block;
+    margin-right: 14px;
   }
   .navbar-profile {
     margin-right: 60px;
