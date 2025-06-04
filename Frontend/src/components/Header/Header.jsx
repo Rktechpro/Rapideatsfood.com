@@ -1,6 +1,8 @@
 import React from "react";
 import "./Header.css";
 import { ReactTyped } from "react-typed";
+import { Link } from "react-router-dom";
+
 const Header = () => {
   return (
     <div className="header">
@@ -32,7 +34,9 @@ const Header = () => {
           easy and enjoyable for everyone. Savor the flavor!
         </p>
         <div className="flex ">
+          <Link to="/meorders" className="link">
           <button className="order_btn">Order</button>
+          </Link>
           <button className="order_btn mx-3 ">Contact Me</button>
         </div>
       </div>
