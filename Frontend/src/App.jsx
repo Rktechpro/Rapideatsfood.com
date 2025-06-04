@@ -10,6 +10,7 @@ import Home from "./page/Home/Home";
 import Footer from "./components/footer/Footer";
 import Placeorder from "./page/Placeorder/Placeorder";
 import Meorder from "./page/Order/Meorder";
+import AdminLogin from "./components/AdminLogin/AdminLogin";
 import Verify from "./page/verfiy/Verify";
 import Layout from "./components/Layout/Layout";
 import Search from "./components/Search/Search";
@@ -34,6 +35,7 @@ const App = () => {
           <Route path="/meorders" element={<Meorder />} />
           <Route path="/verify" element={<Verify />} />
           <Route path="/search" element={<Search />} />
+          <Route path="/adminlogin" element={<AdminLogin />} />
         </Routes>
       </div>
       <Footer />
