@@ -72,13 +72,12 @@
 }
 
 /* Responsive Design */
-@media (max-width:1180px) {
-  .header{
+@media (max-width: 1180px) {
+  .header {
     height: auto;
     padding: 30px;
     margin-top: 40px;
   }
-  
 }
 @media (max-width: 768px) {
   .header {
@@ -87,8 +86,8 @@
     margin-top: 40px;
     justify-content: center;
     text-align: center;
-    background-image:none ;
-    background-color: #953A01;
+    background-image: none;
+    background-color: #953a01;
   }
   .header_content {
     max-width: 90%;
@@ -97,8 +96,8 @@
     align-items: center;
   }
   .head_p {
-     font-size: 10px;
-     font-family: sans-serif;
+    font-size: 10px;
+    font-family: sans-serif;
   }
   .button-container {
     flex-direction: column;
@@ -108,7 +107,7 @@
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 412px) {
   .title {
     font-size: 1.5rem;
   }
@@ -131,7 +130,6 @@
   }
 
   .order_btn {
-     padding: 10px 30px;
-    
+    padding: 10px 30px;
   }
 }

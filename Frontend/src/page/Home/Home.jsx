@@ -4,11 +4,13 @@ import Menu from "../../components/menu/Menu";
 import Food_disp from "../../components/food_item_display/Food_disp";
 
 const Home = () => {
-  const [category, setCatgory] = useState('All');
+  const [category, setCatgory] = useState("All");
   return (
     <div className="Home" id="Home">
-      <Header/>
-      <Menu category={category} setCatgory={setCatgory} />
+      <Header />
+      <div>
+        <Menu category={category} setCatgory={setCatgory} />
+      </div>
       <Food_disp category={category} />
     </div>
   );
