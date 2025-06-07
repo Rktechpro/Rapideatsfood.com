@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import {
   CheckSquareOutlined,
@@ -23,26 +22,15 @@ const Sidebar = () => {
 
       <aside className={`sidebar ${isOpen ? "open" : ""}`}>
         <nav className="sidebar-options">
-          <NavLink
-            to="/add"
-            className="sidebar-option"
-          >
+          <NavLink to="/add" className="sidebar-option">
             <PlusCircleOutlined className="icon" />
             <span>Add Item</span>
           </NavLink>
-          <NavLink
-            to="/list"
-            className="sidebar-option"
-            
-          >
+          <NavLink to="/list" className="sidebar-option">
             <CheckSquareOutlined className="icon" />
             <span>List Item</span>
           </NavLink>
-          <NavLink
-            to="/order"
-            className="sidebar-option"
-            
-          >
+          <NavLink to="/order" className="sidebar-option">
             <ShopOutlined className="icon" />
             <span>Order</span>
           </NavLink>

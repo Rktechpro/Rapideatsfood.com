@@ -10,6 +10,7 @@ import List from "./Components/page/list/List";
 import Order from "./Components/page/order/Order";
 import { useState } from "react";
 import AdminLogin from "./Components/Login/AdminLogin";
+import Home from "./Components/page/Home/Home";
 
 const url = import.meta.env.VITE_API_URL;
 const App = () => {
@@ -31,9 +32,13 @@ const App = () => {
           <div className="app-content">
             <Sidebar />
             <Routes>
+              <Route path="/" element={<Home />} />
               <Route path="/add" element={<Add url={url} token={token} />} />
               <Route path="/list" element={<List url={url} token={token} />} />
-              <Route path="/order" element={<Order url={url} token={token} />} />
+              <Route
+                path="/order"
+                element={<Order url={url} token={token} />}
+              />
             </Routes>
           </div>
         </>
