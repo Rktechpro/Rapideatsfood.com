@@ -4,11 +4,13 @@ import axios from "axios";
 import { useState } from "react";
 import { toast } from "react-toastify";
 import persal from "../../../assets/img/parcel.png";
-const Order = ({ url }) => {
+const Order = ({ url, token }) => {
   const [orderAdmin, setOrderAdmin] = useState([]);
   const fetchallorder = async () => {
     try {
-      const response = await axios.get(url + "/api/order/listadmin");
+      const response = await axios.get(url + "/api/order/listadmin", {
+        headers: { token },
+      });
       // console.log(response.data);
       if (response.data.success) {
         setOrderAdmin(response.data.data.reverse());
@@ -19,10 +21,14 @@ const Order = ({ url }) => {
   };
   const HandleStaus = async (e, orderId) => {
     try {
-      const response = await axios.post(`${url}/api/order/Status`, {
-        orderId,
-        status: e.target.value,
-      });
+      const response = await axios.post(
+        `${url}/api/order/Status`,
+        {
+          orderId,
+          status: e.target.value,
+        },
+        { headers: { token } }
+      );
       if (response.data.success) {
         await fetchallorder();
         toast.success(response.data.message);

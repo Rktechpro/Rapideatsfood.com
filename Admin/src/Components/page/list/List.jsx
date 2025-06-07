@@ -5,7 +5,7 @@ import { useEffect } from "react";
 import { toast } from "react-toastify";
 import "./List.css";
 
-const List = ({ url }) => {
+const List = ({ url ,token}) => {
   const [data, setdata] = useState([]);
   const foodlist = async () => {
     try {
@@ -18,7 +18,7 @@ const List = ({ url }) => {
     }
   };
   const removeitem = async (foodid) => {
-    const respone = await axios.post(`${url}/api/food/delete`, { id: foodid });
+    const respone = await axios.post(`${url}/api/food/delete`, { id: foodid },{headers:{token}});
     await foodlist();
     if (respone.data.success) {
       toast.success(respone.data.message);

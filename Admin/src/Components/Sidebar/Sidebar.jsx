@@ -1,29 +1,54 @@
-import React from "react";
+
+import React, { useState } from "react";
 import {
   CheckSquareOutlined,
   PlusCircleOutlined,
   ShopOutlined,
+  MenuOutlined,
+  CloseOutlined,
 } from "@ant-design/icons";
 import { NavLink } from "react-router-dom";
 import "./Sidebar.css";
+
 const Sidebar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleSidebar = () => setIsOpen(!isOpen);
+
   return (
-    <div className="sidebar">
-      <div className="sidebar-options">
-        <NavLink to="/add" className="sidebar-option">
-          <PlusCircleOutlined className="icon" />
-          <p>Add Item</p>
-        </NavLink>
-        <NavLink to="/list" className="sidebar-option">
-          <CheckSquareOutlined className="icon" />
-          <p>List Item</p>
-        </NavLink>
-        <NavLink to="/order" className="sidebar-option">
-          <ShopOutlined className="icon" />
-          <p>Order</p>
-        </NavLink>
+    <>
+      <div className="sidebar-toggle" onClick={toggleSidebar}>
+        {isOpen ? <CloseOutlined /> : <MenuOutlined />}
       </div>
-    </div>
+
+      <aside className={`sidebar ${isOpen ? "open" : ""}`}>
+        <nav className="sidebar-options">
+          <NavLink
+            to="/add"
+            className="sidebar-option"
+          >
+            <PlusCircleOutlined className="icon" />
+            <span>Add Item</span>
+          </NavLink>
+          <NavLink
+            to="/list"
+            className="sidebar-option"
+            
+          >
+            <CheckSquareOutlined className="icon" />
+            <span>List Item</span>
+          </NavLink>
+          <NavLink
+            to="/order"
+            className="sidebar-option"
+            
+          >
+            <ShopOutlined className="icon" />
+            <span>Order</span>
+          </NavLink>
+        </nav>
+      </aside>
+    </>
   );
 };
 

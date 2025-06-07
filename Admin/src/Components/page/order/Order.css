@@ -1,54 +1,83 @@
-.orderlist-item {
-  display: grid;
-  grid-template-columns: 0.5fr 2fr 1fr 1fr 1fr 1fr 1fr;
-  align-items: start;
-  gap: 25px;
-  border: 1px solid #f29648;
+.order {
   padding: 20px;
-  margin: 28px 0px;
-  font-size: 14px;
-  color: rgb(72, 72, 72);
+  width: 100%;
+  box-sizing: border-box;
 }
-.orderlist-item-food,
-.orderlist-item-name {
-  font-weight: 600;
+
+.order h2 {
+  margin-bottom: 20px;
+  color: #1f2937;
 }
-.orderlist-item-name {
-  margin-top: 30px;
-  margin-bottom: 5px;
+.orderlist {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
-.orderlist-item-address {
-  margin-bottom: 9px;
+
+.orderlist-item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 15px;
+  background-color: #f9fafb;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
-.orderlist-item select {
-  padding: 10px 5px;
-  background-color: #ffecd7;
-  outline: none;
-  padding: 10px 0px;
-  border: 1px solid #f29648;
-  color: rgb(121, 116, 116);
-  font-weight: bold;
-  cursor: pointer;
-  width: max(10vw, 120px);
-}
+
 .orderlist-item img {
   width: 60px;
+  height: 60px;
+  object-fit: contain;
+  margin-right: 15px;
 }
-@media Screen and (max-width: 1000px) {
+
+.orderlist-item > div {
+  flex: 1;
+  min-width: 200px;
+}
+
+.orderlist-item-food {
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.orderlist-item-name {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.orderlist-item-address {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.orderlist-item-phone {
+  font-size: 14px;
+  color: #374151;
+  font-weight: 500;
+}
+
+select {
+  padding: 5px;
+  border-radius: 4px;
+  border: 1px solid #d1d5db;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
   .orderlist-item {
-    grid-template-columns: 0.5fr 2fr;
-    font-size: 11px;
-    padding: 20px 10px;
-    margin-right: 2px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
   }
-  .orderlist-item select {
-    font-size: 11px;
-  }
-  .orderlist-item select {
-    padding: 5px;
-    font-size: 11px;
-  }
+
   .orderlist-item img {
-    width: 64px;
+    margin-bottom: 10px;
+  }
+
+  select {
+    width: 100%;
   }
 }
