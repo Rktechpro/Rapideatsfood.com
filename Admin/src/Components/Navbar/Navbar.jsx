@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Navbar.css";
 import profile from "../../assets/img/profile.png";
+import { Link } from "react-router-dom";
 
 const Navbar = ({ setToken }) => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -17,8 +18,8 @@ const Navbar = ({ setToken }) => {
       >
         <img className="navbar-profile" src={profile} alt="User profile" />
         <div className={`navbar-dropdown ${dropdownOpen ? "show" : ""}`}>
-          <a href="#">Profile</a>
-          <a onClick={() => setToken("")}>Logout</a>
+         
+          <Link onClick={() => setToken("")}>Logout</Link>
         </div>
       </div>
     </header>

@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import "./AdminLogin.css";
-import admin from "../../assets/img/admin.png";
+
 import { LockFilled, UserOutlined } from "@ant-design/icons";
+
 
 const AdminLogin = () => {
   const [adminData, setAdminData] = useState({
@@ -15,9 +16,7 @@ const AdminLogin = () => {
   };
   const AdminFormHandle = (e) => {
     e.preventDefault();
-    // Here you would typically handle the login logic, such as sending the data to your backend
-    console.log("Admin Data Submitted:", adminData);
-    // Reset the form after submission
+   
   };
 
   return (
@@ -46,7 +45,7 @@ const AdminLogin = () => {
               name="password"
             />
             <span className="icon">
-              <LockFilled style={{cursor:"pointer"}} />
+              <LockFilled style={{ cursor: "pointer" }} />
             </span>
           </div>
           <button type="submit" className="login-button">

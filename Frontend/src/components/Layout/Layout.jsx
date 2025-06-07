@@ -19,7 +19,7 @@ const Layout = ({ setLoginpage, children }) => {
     useContext(context_store);
   const usenavgate = useNavigate();
   const navgateOrder = useNavigate();
-  const Adminnavagate = useNavigate();
+
   const logout = () => {
     usenavgate("/");
     localStorage.removeItem("token");
@@ -29,9 +29,7 @@ const Layout = ({ setLoginpage, children }) => {
   const orders = () => {
     navgateOrder("/meorders");
   };
-  const Admin = () => {
-    Adminnavagate("/adminlogin");
-  };
+
   const [open, setOpen] = useState(false);
   const onPhoneMenuOpen = () => {
     setOpen(true);
@@ -125,10 +123,6 @@ const Layout = ({ setLoginpage, children }) => {
               Logout
             </li>
             <hr />
-            <li onClick={Admin}>
-              <UserAddOutlined/>
-              Admin
-            </li>
           </ul>
         </div>
       )}
