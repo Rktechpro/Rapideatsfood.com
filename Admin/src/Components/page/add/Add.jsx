@@ -32,6 +32,7 @@ const Add = ({ url, token }) => {
       formData.append("image", image);
       const response = await axios.post(`${url}/api/food/add`, formData, {
         headers: { token },
+        "Content-Type": "application/json",
       });
       if (response.data.success) {
         setdata({
