@@ -21,27 +21,32 @@ const Add = ({ url, token }) => {
   };
 
   const onsubmithandler = async (e) => {
-    e.preventDefault();
-    const formData = new FormData();
-    formData.append("name", data.name);
-    formData.append("price", Number(data.price));
-    formData.append("category", data.category);
-    formData.append("description", data.description);
-    formData.append("image", image);
-    const response = await axios.post(`${url}/api/food/add`, formData, {
-      headers: { token },
-    });
-    if (response.data.success) {
-      setdata({
-        name: "",
-        description: "",
-        price: "",
-        category: "Salad",
+    try {
+      
+      e.preventDefault();
+      const formData = new FormData();
+      formData.append("name", data.name);
+      formData.append("price", Number(data.price));
+      formData.append("category", data.category);
+      formData.append("description", data.description);
+      formData.append("image", image);
+      const response = await axios.post(`${url}/api/food/add`, formData, {
+        headers: { token },
       });
-      setimage(false);
-      toast.success(response.data.message);
-    } else {
-      toast.error(response.data.message);
+      if (response.data.success) {
+        setdata({
+          name: "",
+          description: "",
+          price: "",
+          category: "Salad",
+        });
+        setimage(false);
+        toast.success(response.data.message);
+      } else {
+        toast.error(response.data.message);
+      }
+    } catch (error) {
+      console.error(error)
     }
   };
 
