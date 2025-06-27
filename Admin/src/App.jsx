@@ -12,7 +12,7 @@ import { useState } from "react";
 import AdminLogin from "./Components/Login/AdminLogin";
 import Home from "./Components/page/Home/Home";
 
-const url = import.meta.env.VITE_API_URL;
+const url = 'https://rapideastfoodservers.onrender.com';
 
 const App = () => {
   const [token, setToken] = useState(
